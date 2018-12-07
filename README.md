@@ -1,4 +1,4 @@
-# CSharpURLShortenerBot
+# Telegram URL Shortener Bot
 Telegram URL Shortener Bot Based on Telegram.Bot
 
 # Persian Reference
