@@ -70,7 +70,7 @@ namespace CSharpURLShortenerBot
         /// <summary>
         /// Launch the robot with given token
         /// </summary>
-        /// <param name="botToken">توکن ربات</param>
+        /// <param name="botToken">Bot token</param>
         public static void InitializeBot(string botToken)
         {
             _botClient = new TelegramBotClient(botToken);
@@ -159,7 +159,6 @@ namespace CSharpURLShortenerBot
 
             if (message.Equals("/start"))
             {
-                // ارسال پیام خوش آمد گویی به کاربر
                 await _botClient.SendTextMessageAsync(e.Message.Chat,
                     StartCommandResponse,
                     ParseMode.Default,
@@ -171,7 +170,6 @@ namespace CSharpURLShortenerBot
 
             if (!IsValidUrl(message))
             {
-                // ارسال پیام خطا به کاربر
                 await _botClient.SendTextMessageAsync(e.Message.Chat,
                     InvalidUrlResponse,
                     ParseMode.Default,
